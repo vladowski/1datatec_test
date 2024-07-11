@@ -7,7 +7,7 @@ This README provides instructions how to run this project locally. Test task imp
 ### 1. Clone the Project
 
 ```bash
-git clone git@github.com:vladowski/1datatec_test.git
+git clone git@github.com:vladowski/1datatec_test.git datatec_test
 cd datatec_test
 ```
 
@@ -47,7 +47,7 @@ php artisan sail:install --with=mysql
 ### 8. Run Tests
 
 ```bash
-./vendor/bin/sail test
+./vendor/bin/sail test tests/Feature/SubmitControllerTest.php
 ```
 
 ### 9. Test with Postman
