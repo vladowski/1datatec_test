@@ -8,29 +8,49 @@ This README provides instructions how to run this project locally. Test task imp
 
 ```bash
 git clone git@github.com:vladowski/1datatec_test.git
-cd 1datatec_test
+cd datatec_test
 ```
 
-### 2. Start Laravel Sail
+### 2. Install dependencies
+```bash
+composer install
+```
+
+### 3. Create .env File
 
 ```bash
-./vendor/bin/sail up
+cp .env.example .env
 ```
-This command launches the necessary Docker containers for your Laravel project.
 
-### 3. Run the Job Queue
+### 4. Install Sail to test locally
+```bash
+php artisan sail:install --with=mysql
+```
+
+### 5. Start Laravel Sail
+
+```bash
+./vendor/bin/sail up -d
+```
+
+### 6. Run migrations
+```bash
+./vendor/bin/sail artisan migrate
+```
+
+### 7. Run the Job Queue
 
 ```bash
 ./vendor/bin/sail artisan queue:work
 ```
 
-### 4. Run Tests
+### 8. Run Tests
 
 ```bash
 ./vendor/bin/sail test
 ```
 
-### 5. Test with Postman
+### 9. Test with Postman
 
  * Import the provided Postman request collection from `postman/1datatec_test.postman_collection.json`.
  * Start the Laravel server (if not already running).
