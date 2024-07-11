@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "a9b6d4a1-14e6-4229-99b6-6be6dc3c1eac",
+		"name": "1datatec_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3365278",
+		"_collection_link": "https://interstellar-zodiac-809440.postman.co/workspace/New-Team-Workspace~23ba1d1e-2dfc-4798-9b70-abd0af69b73e/collection/3365278-a9b6d4a1-14e6-4229-99b6-6be6dc3c1eac?action=share&source=collection_link&creator=3365278"
+	},
+	"item": [
+		{
+			"name": "✅ Submit 200",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"name\": \"John Doe\",\n      \"email\": \"john.doe@example.com\",\n      \"message\": \"This is a test message.\"\n }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "⛔️ Submit 400",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"name\": \"John Doe\",\n      \"email\": \"john.doe@example.com\",\n      \"message\": \"This is a test message.\"\n }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
